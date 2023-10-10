@@ -24,8 +24,6 @@ body {
     width: 0px;
     height: 100%;
     margin-top: 5px;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 0 6px 0 0;
     overflow: hidden;
     position: fixed;
@@ -222,7 +220,7 @@ main{
 }
  .center-section-1 .card div :nth-child(3){
     color: var(--water);
-    font-size: minmax(20px);
+    font-size: 20px;
     margin: 10px 0 10px 25px;
 }
  .center-section-1 .card div :nth-child(4){
