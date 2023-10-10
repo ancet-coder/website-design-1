@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website design #1</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+
+    <!-- sidebar start -->
+
+    <aside class="sidebar" id="mySidebar">
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='dashboard' type='solid'></box-icon></i>Dashboard</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='line-chart'></box-icon></i>Analytics</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='basket' type='solid'></box-icon></i>Products</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='task'></box-icon></i>Tasks</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='component' type='solid'></box-icon></i>Features</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='user-circle' type='solid'></box-icon></i>Users</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='dollar-circle' type='solid'></box-icon></i>Pricing</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='analyse' type='solid'></box-icon></i>Connections</a>
+        <hr>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='cog' type='solid'></box-icon></i>Settings</a>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='receipt' type='solid'></box-icon></i>Templates</a>
+        <div class="sidebar-profile">
+            <a href=""><img src="image/logo.png" alt=""></a>
+            <div>
+                <h3>educatster</h3>
+                <a href=""><p>Account Settings</p></a>
+            </div>
+        </div>
+        <a class="list-item" onclick="activateListItem(this)" href="#"><i><box-icon color="var(--white)" name='log-out-circle'></box-icon></i>Logout</a></li>
+        
+        <hr>
+        <div class="switch">
+            <div class="theme-container">
+                <i id="theme1" onclick="activeTheme1()"><box-icon name='sun' type="solid"></box-icon></i>
+                <i id="theme2" onclick="activeTheme2()" style="z-index: -1;"><box-icon name='moon' type="solid"></box-icon></i>
+                <div id="btn"></div>
+            </div>
+            <div class="bell-container">
+                <i class="bell"><box-icon name='bell' type="solid"></box-icon></i>
+            </div>
+        </div>
+    </aside>
+
+    <!-- navebar start -->
+
+    <header>
+        <ul class="top-content">
+            <li class="left">
+                <button class="open-button" onclick="openSidebar()"><box-icon color="var(--white)" name='menu' ></box-icon></button>
+                <button class="close-button"onclick="closeSidebar()"><box-icon color="var(--white)" name='menu'></box-icon></button>
+                <h2>Logo</h2>
+            </li>
+            <li class="mid"></li>
+            <li class="right">
+                <img src="image/logo.png" alt="">
+            </li>
+        </ul>
+    </header>
+
+    <!-- whole body content -->
+
+    <div class="page-content">
+        <main>
+
+            <div class="belt">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="center-section-1">
+
+                <!-- cards -->
+
+                <div class="card">
+                    <div>
+                        <p><i><box-icon class="icon" name='show' type='solid' color= "var(--water)" size="50px"></box-icon></i></p>
+                        <p>Pageviews</p>
+                        <p>50.8K</p>
+                        <p>28.4% <i><box-icon name='right-top-arrow-circle' type='solid' color='#06aa07'></box-icon></i></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <p><i><box-icon class="icon" name='user-pin' type='solid' color= "var(--water)" size="50px"></box-icon></i></p>
+                        <p>Monthly Users</p>
+                        <p>28.6K</p>
+                        <p>12.6% <i><box-icon  name='right-top-arrow-circle' type='solid' color='#06aa07'></box-icon></i></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <p><i><box-icon class="icon" name='user-account' type='solid' color= "var(--water)" size="50px"></box-icon></i></p>
+                        <p>New sign ups</p>
+                        <p>756</p>
+                        <p>3.1% <i><box-icon name='right-down-arrow-circle' type='solid' color='#ff0000'></box-icon></i></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <p><i><box-icon class="icon" name='star' type='solid' color= "var(--water)" size="50px"></box-icon></i></p>
+                        <p>Subscriptions</p>
+                        <p>4.3K</p>
+                        <p>11.3% <i><box-icon name='right-top-arrow-circle' type='solid' color='#06aa07'></box-icon></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="belt">
+                <h1>Top sellers</h1>
+            </div>
+
+            <!-- table -->
+
+            <table>
+                <tr>
+                  <th>Users</th>
+                  <th>Connections</th>
+                  <th>Ranking</th>
+                </tr>
+                <tr>
+                  <td>Raghav Mishra</td>
+                  <td>View</td>
+                  <td>1056</td>
+                </tr>
+                <tr>
+                  <td>Vinay</td>
+                  <td>View</td>
+                  <td>1057</td>
+                </tr>
+                <tr>
+                  <td>Devansh baghel</td>
+                  <td>View</td>
+                  <td>1058</td>
+                </tr>
+                <tr>
+                  <td>Rahul</td>
+                  <td>View</td>
+                  <td>1059</td>
+                </tr>
+                <tr>
+                  <td>Yesh</td>
+                  <td>View</td>
+                  <td>1060</td>
+                </tr>
+                <tr>
+                  <td>Keshav</td>
+                  <td>View</td>
+                  <td>1061</td>
+                </tr>
+              </table>
+
+              <div class="belt">
+                  <h1>Your Partners</h1>
+              </div>
+
+              <!-- partner's card-1 -->
+
+            <div class="center-section-2">
+                            <div class="box">
+                                <div class="user">
+                                    <div class="user-profile">
+                                        <div class="name" id="name">
+                                            <a href="#"><img src="image/profile1.jpeg" alt=""></a>
+                                            <h3>Vishal Gupta</h3>
+                                            <ul onclick="myFunction1()" style="white-space: nowrap;">view customers</ul>
+                                        </div>
+                                        <div id="myDIV1" class="user-card">
+                                            <div class="tray">
+                                                <script>
+                                                    for (let i = 0; i < 16; i++) {
+                                                        document.write(`
+                                                            <div class="profile-wrapper">
+                                                                <div class="profile-img-wrapper">
+                                                                    <img src="image/profile2.jpeg">
+                                                                    <h4>Avinash</h4>
+                                                                    <a href="">View</a>
+                                                                </div>
+                                                            </div>
+                                                        `);
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- partner's card-2 -->
+
+                            <div class="box">
+                                <div class="user">
+                                    <div class="user-profile">
+                                        <div class="name">
+                                            <a href="#"><img src="image/profile3.jpeg" alt=""></a>
+                                            <h3>Arpit</h3>
+                                            <ul onclick="myFunction2()" style="white-space: nowrap;">view customers</ul>
+                                        </div>
+                                        <div id="myDIV2" class="user-card">
+                                            <div class="tray">
+                                                <script>
+                                                    for (let i = 0; i < 16; i++) {
+                                                        document.write(`
+                                                            <div class="profile-wrapper">
+                                                                <div class="profile-img-wrapper">
+                                                                    <img src="image/profile4.jpeg" alt="">
+                                                                    <h4>bhuvnash</h4>
+                                                                    <a href="">View</a>
+                                                                </div>
+                                                            </div>
+                                                        `);
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- partner's card-3 -->
+
+                            <div class="box">
+                                <div class="user">
+                                    <div class="user-profile">
+                                        <div class="name">
+                                            <a href="#"><img src="image/profile5.jpeg" alt=""></a>
+                                            <h3>Rajiv</h3>
+                                            <ul onclick="myFunction3()" style="white-space: nowrap;">view customers</ul>
+                                        </div>
+                                        <div id="myDIV3" class="user-card">
+                                            <div class="tray">
+                                                <script>
+                                                    for (let i = 0; i < 16; i++) {
+                                                        document.write(`
+                                                            <div class="profile-wrapper">
+                                                                <div class="profile-img-wrapper">
+                                                                    <img src="image/profile6.jpeg" alt="">
+                                                                    <h4>Bheem</h4>
+                                                                    <a href="">View</a>
+                                                                </div>
+                                                            </div>
+                                                        `);
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- partner's card-4 -->
+
+                            <div class="box">
+                                <div class="user">
+                                    <div class="user-profile">
+                                        <div class="name">
+                                            <a href="#"><img src="image/profile7.jpeg" alt=""></a>
+                                            <h3>yesh</h3>
+                                            <ul onclick="myFunction4()" style="white-space: nowrap;">view customers</ul>
+                                        </div>
+                                        <div id="myDIV4" class="user-card">
+                                            <div class="tray">
+                                                <script>
+                                                    for (let i = 0; i < 16; i++) {
+                                                        document.write(`
+                                                            <div class="profile-wrapper">
+                                                                <div class="profile-img-wrapper">
+                                                                    <img src="image/profile8.jpeg" alt="">
+                                                                    <h4>Yogesh</h4>
+                                                                    <a href="">View</a>
+                                                                </div>
+                                                            </div>
+                                                        `);
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- whole body content complete -->
+    <script src="index.js"></script>
+</body>
+</html>
