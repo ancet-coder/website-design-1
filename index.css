@@ -233,6 +233,7 @@ main{
 .belt{
     padding: 5px;
     margin: 20px;
+    min-width: 235px;
     display: flex;
     justify-content: center;
     align-items: center;
