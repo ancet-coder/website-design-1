@@ -5,6 +5,7 @@
     --red: red;
     --green: green;
     --blue: #02173f;
+    --yellow:yellow;
 }
 *{
     margin: 0;
@@ -18,34 +19,40 @@ body {
      font-family: Arial, sans-serif;
 }
 
-/* sidebar styling */
+/* sidebar styling -------------------------------------------------------------------------------------------------------- */
 .sidebar{
-    z-index: 1;
-    width: 0px;
-    height: 100%;
-    margin-top: 5px;
+    box-shadow: 0 0 10px var(--black);
+    border: 1px solid var(--water);
+    background-color: var(--blue);
     border-radius: 0 6px 0 0;
+    scrollbar-width: none;
     overflow: hidden;
     position: fixed;
-    scrollbar-width: none;
+    margin-top: 5px;
     transition: 0.5s;
-    background-color: var(--blue);
-    border: 1px solid var(--water);
-    box-shadow: 0 0 10px var(--black);
+    height: 100%;
+    width: 0px;
+    z-index: 1;
 }
 .sidebar::-webkit-scrollbar{
     display: none;
 }
+.sidebar-profile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--water);
+}
 .sidebar a{
     text-decoration: none;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
     color: var(--white);
+    justify-content: left;
+    flex-direction: row;
+    display: flex;
+    padding: 5px;
 }
 .sidebar a:hover{
-    transform: scale(1.1);
+    color: var(--yellow);
 }
 .sidebar a i{
     margin: 0 30px 0 20px;
@@ -58,12 +65,6 @@ body {
 }
 .sidebar-profile div h3{
     color: var(--water);
-}
-.sidebar-profile img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid var(--water);
 }
 .sidebar-profile div{
     display: flex;
@@ -80,7 +81,64 @@ body {
 .sidebar div a:hover{
     color: var(--white);
 }
+.switch{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-container,.bell-container{
+    box-shadow: 5px 5px 10px var(--black);
+    border: 1px solid var(--water);
+    background-color: var(--blue);
+    border-radius: 50px;
+    margin: 5px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+#theme1,#theme2,.bell{
+    background-color: var(--water);
+    border-radius: 50%;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+hr{
+    margin: 15px;
+    height: 1px;
+}
+.active {
+    background-color: var(--water);
+    border: 1px solid var(--white);
+    box-shadow: 0px 2px 5px var(--black);
+    border-left: 4px solid var(--white);
+}
+/* sidebar styling complete-------------------------------------------------------------------------------------------------- */
 
+
+
+/* navebar styling -----------------------------------------------------------------------------------------------------------*/
+.top-content{
+    border-bottom: 2px solid var(--water);
+    box-shadow: 0 0 10px var(--black);
+    background-color: var(--blue);
+    justify-content: space-between;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 200px;
+    height: 30px;
+    padding: 10px;
+    z-index: 1;
+    display: flex;
+}
+.top-content .left{
+    padding-left: 35px;
+}
 .open-button, .close-button {
     top: 0px;
     left: 0px;
@@ -98,86 +156,27 @@ body {
 .open-button{
     z-index: 1;
 }
-
-.switch{
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.theme-container,.bell-container{
-    margin: 5px;
-    display: flex;
-    overflow: hidden;
-    align-items: center;
-    border-radius: 50px;
-    background-color: var(--blue);
-    border: 1px solid var(--water);
-    box-shadow: 5px 5px 10px var(--black);
-}
-#theme1,#theme2{
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--water);
-}
-.bell{
-    margin: 5px;
-    padding: 3px 5px;
-    border-radius: 50%;
-    background-color: var(--water);
-}
-hr{
-    margin: 15px;
-    height: 1px;
-}
-
-.active {
-    background-color: var(--water);
-    border: 1px solid var(--white);
-    box-shadow: 0px 2px 5px var(--black);
-    border-left: 4px solid var(--white);
-}
-/* navebar styling */
-.top-content{
-    top: 0;
-    width: 100%;
-    min-width: 200px;
-    height: 30px;
-    padding: 10px;
-    z-index: 1;
-    position: fixed;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--blue);
-    box-shadow: 0 0 10px var(--black);
-    border-bottom: 2px solid var(--water);
-}
-.top-content .left{
-    padding-left: 35px;
-}
 .top-content .left h2{
-      display: flex;
-      margin-left: 15px;
-      color: var(--water);
+    display: flex;
+    margin-left: 15px;
+    color: var(--water);
 }
 .top-content li{
     display: flex;
     align-items: center;
 }
 .top-content li img{
+    border: 2px solid var(--white);
+    margin: 0 30px 0 20px;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    margin: 0 30px 0 20px;
-    border: 2px solid var(--white);
 }
+/* navebar styling -----------------------------------------------------------------------------------------------------------*/
 
-/* main styling */
+
+
+/* main styling --------------------------------------------------------------------------------------------------------------*/
 .page-content{
     transition: 0.5s;
 }
@@ -193,16 +192,16 @@ main{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
  .center-section-1 .card{
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    transition: all 0.3s ease;
-    background-color: var(--blue);
-    border: 1px solid var(--water);
-    box-shadow: 2px 5px 10px var(--black);
+     box-shadow: 2px 5px 10px var(--black);
+     border: 1px solid var(--water);
+     background-color: var(--blue);
+     border-radius: 10px;
+     cursor: pointer;
+     padding: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: left;
+     transition: all 0.3s ease;
 }
 .center-section-1 .card:hover{
     transform: scale(1.1);
@@ -211,7 +210,7 @@ main{
     position: absolute;
     align-items: center;
     justify-content: center;
-    margin: 35px 80px 0 160px;
+    margin: 35px 80px 0 180px;
 }
  .center-section-1 .card div :nth-child(2){
     font-weight: 1000;
@@ -225,33 +224,33 @@ main{
 }
  .center-section-1 .card div :nth-child(4){
     color: var(--green);
-    font-size: mimax(10px);
+    font-size: 10px;
     margin: 10px 0 10px 25px;
 }
 /* top sellers styling */
 
 .belt{
+    box-shadow: -2px -2px 20px 2px var(--black);
+    border: 2px solid var(--water);
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 50px;
+    min-width: 235px;
     padding: 5px;
     margin: 20px;
-    min-width: 235px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    color: var(--white);
-    background-color: var(--blue);
-    border: 2px solid var(--water);
-    box-shadow: -2px -2px 20px 2px var(--black);
+    justify-content: center;
 }
 
 
 /* table styling */
 table {
-    width: 96%;
-    margin: 20px 2%;
-    border-radius: 20px;
-    border: 2px solid var(--blue);
     box-shadow: 5px 5px 10px var(--black);
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    margin: 20px 2%;
+    width: 96%;
  }
 
  td, th {
@@ -268,25 +267,25 @@ table {
 /* main section-2 styling */
 
 main .center-section-2{
-    gap: 20px;
-    display: grid;
-    padding: 20px;
     color: var(--white);
+    gap: 20px;
+    padding: 20px;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 main .center-section-2 .user-profile{
+    box-shadow: 2px 5px 10px var(--black);
+    border: 1px solid var(--water);
+    background-color: var(--blue);
+    flex-direction: column;
+    border-radius: 10px;
     padding: 5px 25px;
     display: flex;
-    flex-direction: column;
-    justify-content: left;
     align-items: center;
+    justify-content: left;
     cursor: pointer;
-    border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
-    background-color: var(--blue);
-    border: 1px solid var(--water);
-    box-shadow: 2px 5px 10px var(--black);
 }
 main .center-section-2 .user-profile .name{
     justify-content: center;
@@ -295,10 +294,10 @@ main .center-section-2 .user-profile .name{
     flex-direction: column;
 }
 .center-section-2 img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     border: 2px solid var(--water);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 .center-section-2 .box .user-profile a{
     color: var(--water);
@@ -317,15 +316,15 @@ main .center-section-2 .user-profile .name{
     text-align: center;
 }
 .profile-img-wrapper{
+    box-shadow: -2px -2px 20px 2px var(--water);
+    border: 2px solid var(--water);
+    background-color: var(--blue);
+    border-radius: 10px;
     margin: 20px;
     width: 100px;
     height: 100px;
     padding: 10px 0;
     position: relative;
-    border-radius: 10px;
-    background-color: var(--blue);
-    border: 2px solid var(--water);
-    box-shadow: -2px -2px 20px 2px var(--water);
 }
 .profile-img-wrapper:hover{
     transform: scale(1.1);
@@ -343,6 +342,8 @@ main .center-section-2 .user-profile .name{
     object-fit: cover;
     border-radius: 50%;
 }
+/* main styling complete------------------------------------------------------------------------------------------------------*/
+
 
 /* dark-mode */
 .center-section-2 .user-profile.dark-mode{
