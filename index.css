@@ -120,7 +120,7 @@ hr{
 
 
 
-/* navebar styling -----------------------------------------------------------------------------------------------------------*/
+/* header styling -----------------------------------------------------------------------------------------------------------*/
 .top-content{
     border-bottom: 2px solid var(--water);
     box-shadow: 0 0 10px var(--black);
@@ -172,7 +172,7 @@ hr{
     width: 30px;
     height: 30px;
 }
-/* navebar styling complete-----------------------------------------------------------------------------------------------------------*/
+/* header styling complete-----------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -184,6 +184,19 @@ hr{
 main{
     margin: 60px 10px 0;
     margin-left: 240px auto;
+}
+.belt{
+    box-shadow: -2px -2px 20px 2px var(--black);
+    border: 2px solid var(--water);
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 50px;
+    min-width: 235px;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .center-section-1{
     gap: 20px;
@@ -227,22 +240,6 @@ main{
     font-size: 10px;
     margin: 10px 0 10px 25px;
 }
-/* top sellers styling */
-
-.belt{
-    box-shadow: -2px -2px 20px 2px var(--black);
-    border: 2px solid var(--water);
-    background-color: var(--blue);
-    color: var(--white);
-    border-radius: 50px;
-    min-width: 235px;
-    padding: 5px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* table styling */
 table {
@@ -262,7 +259,6 @@ table {
      color: var(--water);
      background-color: var(--blue);
     }
-    
     
 /* main section-2 styling */
 
